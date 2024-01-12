@@ -10,28 +10,24 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     ifstream inputFile("input2.txt");
-
-    if (!inputFile.is_open()) {
-        cerr << "Íå âäàëîñÿ â³äêðèòè âõ³äíèé ôàéë." << endl;
+    if (!inputFile.is_open()) 
+    {
+        cerr << "ÃÃ¥ Ã¢Ã¤Ã Ã«Ã®Ã±Ã¿ Ã¢Â³Ã¤ÃªÃ°Ã¨Ã²Ã¨ Ã¢ÃµÂ³Ã¤Ã­Ã¨Ã© Ã´Ã Ã©Ã«." << endl;
         return 1;
     }
-
     ofstream outputFile("output2.txt");
-
-    if (!outputFile.is_open()) {
-        cerr << "Íå âäàëîñÿ â³äêðèòè âèõ³äíèé ôàéë." << endl;
+    if (!outputFile.is_open()) 
+    {
+        cerr << "ÃÃ¥ Ã¢Ã¤Ã Ã«Ã®Ã±Ã¿ Ã¢Â³Ã¤ÃªÃ°Ã¨Ã²Ã¨ Ã¢Ã¨ÃµÂ³Ã¤Ã­Ã¨Ã© Ã´Ã Ã©Ã«." << endl;
         return 1;
     }
-
     string line;
-    while (getline(inputFile, line)) {
+    while (getline(inputFile, line)) 
+    {
         outputFile << line << endl;
     }
-
     inputFile.close();
     outputFile.close();
-
-    cout << "Êîï³þâàííÿ çàâåðøåíî óñï³øíî." << endl;
-
+    cout << "ÃŠÃ®Ã¯Â³Ã¾Ã¢Ã Ã­Ã­Ã¿ Ã§Ã Ã¢Ã¥Ã°Ã¸Ã¥Ã­Ã® Ã³Ã±Ã¯Â³Ã¸Ã­Ã®." << endl;
     return 0;
 }
